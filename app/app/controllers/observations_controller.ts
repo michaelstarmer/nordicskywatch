@@ -5,14 +5,15 @@ export default class ObservationsController {
   /**
    * Display a list of resource
    */
-  async index({response}: HttpContext)
+  async index({view}: HttpContext)
   {
     const observations = await Observation
       .query()
       .orderBy('occurredAt', 'desc')
       .limit(10)
 
-    return response.json(observations);
+    // return response.json(observations);
+    return view.render('pages/observations', { observations });
   }
 
 
