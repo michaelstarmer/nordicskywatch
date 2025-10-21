@@ -13,7 +13,7 @@ export default class ObservationsController {
       .limit(10)
 
     // return response.json(observations);
-    return view.render('pages/observations', { observations });
+    return view.render('pages/observasjoner', { observations });
   }
 
 
