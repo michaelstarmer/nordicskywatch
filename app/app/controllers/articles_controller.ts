@@ -8,4 +8,16 @@ export default class ArticlesController {
 
         return view.render('pages/article')
     }
+
+    async show({ response, view, request }: HttpContext)
+    {
+        const slug = request.param('slug');
+        console.log('param(\'slug\'):', slug);
+        try {
+            const article = await Article.findByOrFail('slug', slug);
+            return view.render('pages/article', {article});
+        } catch (error) {
+            return response.json({success: false, error})
+        }
+    }
 }
