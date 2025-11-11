@@ -14,7 +14,11 @@ export default class extends BaseSeeder {
       sourceUrl: 'source_url',
       canonicalUrl: 'canonicalUrl',
       excerpt: 'This is the excerpt.',
-      body: 'This is the body.',
+      body: `<p>Aute mollit excepteur pariatur sit pariatur cillum ex voluptate id non excepteur nulla aliquip. Sint quis sunt nulla non quis culpa duis ipsum sint proident minim. Magna duis non qui velit fugiat enim. Duis in nisi id nulla dolore quis. Sit enim ea ipsum minim commodo aliquip mollit ullamco.</p>
+<h2>Undertittel 1</h2>
+<p>Reprehenderit et exercitation nulla duis duis Lorem. Dolor eu fugiat cupidatat mollit ad quis tempor. Sint anim ut mollit ut elit eu proident esse exercitation qui fugiat eu ullamco. Adipisicing ad minim elit incididunt nulla sint minim.</p>
+<h2>Undertittel 2</h2>
+<p>Enim fugiat in excepteur cillum. Duis ad voluptate excepteur labore ex enim voluptate. Ex incididunt irure dolore proident ut occaecat sunt cillum. Minim amet sint voluptate fugiat culpa ea ullamco pariatur veniam. Nisi cillum et officia eiusmod elit incididunt nostrud exercitation ullamco.</p>`,
       coverImageUrl: 'cover_img_url',
     },
     {
@@ -28,7 +32,11 @@ export default class extends BaseSeeder {
       sourceUrl: 'source_url',
       canonicalUrl: 'canonicalUrl',
       excerpt: 'This is the excerpt for Test article 2.',
-      body: 'This is the body for test article 2.',
+      body: `<p>Aute mollit excepteur pariatur sit pariatur cillum ex voluptate id non excepteur nulla aliquip. Sint quis sunt nulla non quis culpa duis ipsum sint proident minim. Magna duis non qui velit fugiat enim. Duis in nisi id nulla dolore quis. Sit enim ea ipsum minim commodo aliquip mollit ullamco.</p>
+<h2>Undertittel 1</h2>
+<p>Reprehenderit et exercitation nulla duis duis Lorem. Dolor eu fugiat cupidatat mollit ad quis tempor. Sint anim ut mollit ut elit eu proident esse exercitation qui fugiat eu ullamco. Adipisicing ad minim elit incididunt nulla sint minim.</p>
+<h2>Undertittel 2</h2>
+<p>Enim fugiat in excepteur cillum. Duis ad voluptate excepteur labore ex enim voluptate. Ex incididunt irure dolore proident ut occaecat sunt cillum. Minim amet sint voluptate fugiat culpa ea ullamco pariatur veniam. Nisi cillum et officia eiusmod elit incididunt nostrud exercitation ullamco.</p>`,
       coverImageUrl: 'cover_img_url',
     },
     {
@@ -42,7 +50,11 @@ export default class extends BaseSeeder {
       sourceUrl: 'source_url',
       canonicalUrl: 'canonicalUrl',
       excerpt: 'Random excerpt.',
-      body: 'Random body.',
+      body: `<p>Aute mollit excepteur pariatur sit pariatur cillum ex voluptate id non excepteur nulla aliquip. Sint quis sunt nulla non quis culpa duis ipsum sint proident minim. Magna duis non qui velit fugiat enim. Duis in nisi id nulla dolore quis. Sit enim ea ipsum minim commodo aliquip mollit ullamco.</p>
+<h2>Undertittel 1</h2>
+<p>Reprehenderit et exercitation nulla duis duis Lorem. Dolor eu fugiat cupidatat mollit ad quis tempor. Sint anim ut mollit ut elit eu proident esse exercitation qui fugiat eu ullamco. Adipisicing ad minim elit incididunt nulla sint minim.</p>
+<h2>Undertittel 2</h2>
+<p>Enim fugiat in excepteur cillum. Duis ad voluptate excepteur labore ex enim voluptate. Ex incididunt irure dolore proident ut occaecat sunt cillum. Minim amet sint voluptate fugiat culpa ea ullamco pariatur veniam. Nisi cillum et officia eiusmod elit incididunt nostrud exercitation ullamco.</p>`,
       coverImageUrl: 'cover_img_url',
     }]
   )
