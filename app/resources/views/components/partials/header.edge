@@ -13,7 +13,7 @@
         
       </el-popover-group>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        @if (user)
+        @if(isLoggedIn)
         <a href="/logout" class="text-sm/6 font-semibold text-white">Logg ut <span aria-hidden="true">&rarr;</span></a>
         @else
         <a href="/login" class="text-sm/6 font-semibold text-white">Logg inn <span aria-hidden="true">&rarr;</span></a>

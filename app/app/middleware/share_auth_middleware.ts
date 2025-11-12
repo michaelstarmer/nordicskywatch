@@ -3,27 +3,27 @@ import type { NextFn } from '@adonisjs/core/types/http'
 
 export default class ShareAuthMiddleware {
   async handle(ctx: HttpContext, next: NextFn) {
+
+
+
+    // If ctx.auth isn't available (can happen on some non-app routes), bail out
     if (!ctx.auth) {
+      console.log('ctx auth not available')
       await next()
+      return
     }
+
     await ctx.auth.check()
-    ctx.view.share({
-      ctx,
-      user: ctx.auth.user,
-      isLoggedIn: ctx.auth.isAuthenticated,
 
-    })
-    console.log({
-      ctx,
-      user: ctx.auth.user,
-      isLoggedIn: ctx.auth.isAuthenticated,
+    const userData = {
+      user: ctx.auth.user ?? null,
+      isLoggedIn: ctx.auth.isAuthenticated ?? false,
 
-    })
+    }
 
-    /**
+    ctx.view.share(userData)
+    console.log(userData)
 
-     * Call next method in the pipeline and return its output
-     */
     const output = await next()
     return output
   }

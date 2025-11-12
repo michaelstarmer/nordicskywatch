@@ -1,3 +1,4 @@
+import Article from '#models/article';
 import User from '#models/user';
 import type { HttpContext } from '@adonisjs/core/http'
 import hash from '@adonisjs/core/services/hash';
@@ -44,7 +45,10 @@ export default class AdminController {
     async show_dashboard({ view, auth, response }: HttpContext)
     {
         await auth.use('web').authenticate()
+        const articles = await Article.all();
+
+        console.log(`Loaded ${articles.length} articles.`);
         
-        return view.render('pages/admin/dashboard');
+        return view.render('pages/admin/dashboard', {articles});
     }
 }
