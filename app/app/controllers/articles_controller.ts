@@ -12,7 +12,6 @@ export default class ArticlesController {
     async show({ response, view, request }: HttpContext)
     {
         const slug = request.param('slug');
-        console.log('param(\'slug\'):', slug);
         try {
             const article = await Article.findByOrFail('slug', slug);
             return view.render('pages/article', {article});

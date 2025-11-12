@@ -20,6 +20,10 @@ router.on('innsyn').render('pages/innsyn')
 router.on('arkiv').render('pages/arkiv')
 
 router.get('login', [AdminController, 'show_login'])
+router.post('login', [AdminController, 'login'])
+router.get('logout', [AdminController, 'logout'])
+
+router.get('dashboard', [AdminController, 'show_dashboard'])
 
 router.get('artikler', [ArticlesController, 'index'])
 router.get('artikler/:slug', [ArticlesController, 'show'])

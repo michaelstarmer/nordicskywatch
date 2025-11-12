@@ -5,7 +5,6 @@ export default class MainsController {
     async index ({view}: HttpContext)
     {
         const articles = await Article.query().limit(3);
-        console.log(articles)
         return view.render('pages/home', {articles});
     }
 }

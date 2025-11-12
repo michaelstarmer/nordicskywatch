@@ -13,7 +13,11 @@
         
       </el-popover-group>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm/6 font-semibold text-white">SkyWatch DB <span aria-hidden="true">&rarr;</span></a>
+        @if (auth.isLoggedIn)
+        <a href="/logout" class="text-sm/6 font-semibold text-white">Logg ut <span aria-hidden="true">&rarr;</span></a>
+        @else
+        <a href="/login" class="text-sm/6 font-semibold text-white">Logg inn <span aria-hidden="true">&rarr;</span></a>
+        @endif
       </div>
     </nav>
   </header>

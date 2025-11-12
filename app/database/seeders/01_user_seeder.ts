@@ -5,6 +5,7 @@ export default class extends BaseSeeder {
   async run() {
     await User.create({
       email: 'michael@nordicskywatch.no',
+      username: 'michael',
       fullName: 'Michael Starmer',
       password: 'test123',
     })
