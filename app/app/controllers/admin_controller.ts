@@ -43,9 +43,8 @@ export default class AdminController {
 
     async show_dashboard({ view, auth, response }: HttpContext)
     {
-        console.log(auth.use('web').isLoggedOut);
-        console.log(auth.use('web'))
         await auth.use('web').authenticate()
+        
         return view.render('pages/admin/dashboard');
     }
 }

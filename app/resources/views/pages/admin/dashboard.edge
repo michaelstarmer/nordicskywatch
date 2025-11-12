@@ -7,8 +7,8 @@
 
 <div class="bg-zinc-900 min-h-full py-24 sm:py-32">
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        @if(auth.isLoggedIn)
-            <h1 class="text-base/7 font-semibold text-gray-300">Hello {{ auth.user.username }}</h1>
+        @if(isLoggedIn)
+            <h1 class="text-base/7 font-semibold text-gray-300">Hello {{ user.username }}</h1>
         @else
         <h1 class="text-base/7 font-semibold text-gray-300">Dashboard</h1>
         @endif
