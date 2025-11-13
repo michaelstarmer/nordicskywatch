@@ -1,123 +1,170 @@
 @component('components/layout/app', { title: 'Home · Nordic Sky Watch' })
-  @slot('meta')
-    <meta name="description" content="Latest observations across Scandinavia" />
-  @end
-  
-  @slot('main')
-  
-   <div class="overflow-hidden bg-zinc-900 pt-24 pb-12 sm:pt-12 sm:pb-6">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div
-        class="mx-auto grid max-w-2x1 grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-16 sm:gap-y-20 lg:mx-w-none lg:grid-cols-2">
-        <div class="lg:pt-4 lg:pr-8">
-          <div class="lg:max-w-lg">
-            <h2 class="text-base/7 font-semibold text-gray-300">UAP Observasjoner i Norden</h2>
-            <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">Nordic Sky Watch</p>
-            <p class="mt-6 text-lg/8 text-gray-300"><strong>Nordic Sky Watch</strong> er en uavhengig
-              plattform for dokumentasjon og analyse av UAP- og droneobservasjoner i Skandinavia.</p>
-            <dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-300 lg:max-w-none">
-              <div class="relative pl-9">
-                <dt class="inline font-semibold text-white">
-                  <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
-                    class="absolute top-1 left-1 size-5 text-gray-400">
-                    <path
-                      d="M4.632 3.533A2 2 0 0 1 6.577 2h6.846a2 2 0 0 1 1.945 1.533l1.976 8.234A3.489 3.489 0 0 0 16 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234Z" />
-                    <path
-                      d="M4 13a2 2 0 1 0 0 4h12a2 2 0 1 0 0-4H4Zm11.24 2a.75.75 0 0 1 .75-.75H16a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75V15Zm-2.25-.75a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 0 0 .75-.75V15a.75.75 0 0 0-.75-.75h-.01Z"
-                      clip-rule="evenodd" fill-rule="evenodd" />
-                  </svg>
+@slot('meta')
+<meta name="description" content="Latest observations across Scandinavia" />
+@end
 
-                  Interaktiv observasjonsdatabase
-                </dt>
-                <dd class="inline">Utforsk registrerte hendelser via kart, tidslinjer og detaljerte
-                  metadata.</dd>
-              </div>
-              <div class="relative pl-9">
-                <dt class="inline font-semibold text-white">
-                  <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
-                    class="absolute top-1 left-1 size-5 text-gray-400">
-                    <path
-                      d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z"
-                      clip-rule="evenodd" fill-rule="evenodd" />
-                  </svg>
-                  Kildesikret nyhetsarkiv
-                </dt>
-                <dd class="inline">Samling av artikler, rapporter og offisielle dokumenter relatert til
-                  UAP-fenomenet i Norden.</dd>
-              </div>
-              <div class="relative pl-9">
-                <dt class="inline font-semibold text-white">
-                  <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
-                    class="absolute top-1 left-1 size-5 text-gray-400">
-                    <path
-                      d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Zm3.75-2.75a.75.75 0 0 0 1.5 0V9.66l1.95 2.1a.75.75 0 1 0 1.1-1.02l-3.25-3.5a.75.75 0 0 0-1.1 0l-3.25 3.5a.75.75 0 1 0 1.1 1.02l1.95-2.1v4.59Z"
-                      clip-rule="evenodd" fill-rule="evenodd" />
-                  </svg>
-                  Innsynsbegjæringer og analyser
-                </dt>
-                <dd class="inline">Offentlige innsynssaker, tekniske vurderinger og korrespondanse med
-                  myndigheter.</dd>
-              </div>
-            </dl>
-          </div>
+@slot('main')
+
+<div class="overflow-hidden bg-zinc-900 pt-24 pb-12 sm:pt-12 sm:pb-6">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div
+      class="mx-auto grid max-w-2x1 grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-16 sm:gap-y-20 lg:mx-w-none lg:grid-cols-2">
+      <div class="lg:pt-4 lg:pr-8">
+        <div class="lg:max-w-lg">
+          <h2 class="text-base/7 font-semibold text-gray-300">UAP Observasjoner i Norden</h2>
+          <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">Nordic Sky Watch</p>
+          <p class="mt-6 text-lg/8 text-gray-300"><strong>Nordic Sky Watch</strong> er en uavhengig
+            plattform for dokumentasjon og analyse av UAP- og droneobservasjoner i Skandinavia.</p>
+          <dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-300 lg:max-w-none">
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-white">
+                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                  class="absolute top-1 left-1 size-5 text-gray-400">
+                  <path
+                    d="M4.632 3.533A2 2 0 0 1 6.577 2h6.846a2 2 0 0 1 1.945 1.533l1.976 8.234A3.489 3.489 0 0 0 16 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234Z" />
+                  <path
+                    d="M4 13a2 2 0 1 0 0 4h12a2 2 0 1 0 0-4H4Zm11.24 2a.75.75 0 0 1 .75-.75H16a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75V15Zm-2.25-.75a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 0 0 .75-.75V15a.75.75 0 0 0-.75-.75h-.01Z"
+                    clip-rule="evenodd" fill-rule="evenodd" />
+                </svg>
+
+                Interaktiv observasjonsdatabase
+              </dt>
+              <dd class="inline">Utforsk registrerte hendelser via kart, tidslinjer og detaljerte
+                metadata.</dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-white">
+                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                  class="absolute top-1 left-1 size-5 text-gray-400">
+                  <path
+                    d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z"
+                    clip-rule="evenodd" fill-rule="evenodd" />
+                </svg>
+                Kildesikret nyhetsarkiv
+              </dt>
+              <dd class="inline">Samling av artikler, rapporter og offisielle dokumenter relatert til
+                UAP-fenomenet i Norden.</dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-white">
+                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                  class="absolute top-1 left-1 size-5 text-gray-400">
+                  <path
+                    d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Zm3.75-2.75a.75.75 0 0 0 1.5 0V9.66l1.95 2.1a.75.75 0 1 0 1.1-1.02l-3.25-3.5a.75.75 0 0 0-1.1 0l-3.25 3.5a.75.75 0 1 0 1.1 1.02l1.95-2.1v4.59Z"
+                    clip-rule="evenodd" fill-rule="evenodd" />
+                </svg>
+                Innsynsbegjæringer og analyser
+              </dt>
+              <dd class="inline">Offentlige innsynssaker, tekniske vurderinger og korrespondanse med
+                myndigheter.</dd>
+            </div>
+          </dl>
         </div>
-        <!-- src="https://cdn.dribbble.com/userupload/43800374/file/original-7cf58ed2df82554c93e454a6a37534f4.gif?resize=400x0" -->
-        <!-- src="https://static.vecteezy.com/system/resources/previews/004/922/361/non_2x/map-of-scandinavia-on-black-background-vector.jpg"  -->
-        <img width="900" height="512"
-          src="https://cdn.dribbble.com/userupload/43800374/file/original-7cf58ed2df82554c93e454a6a37534f4.gif?resize=400x0"
-          alt="Product screenshot"
-          class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:-ml-0"
-        />
-       
       </div>
+      <!-- src="https://cdn.dribbble.com/userupload/43800374/file/original-7cf58ed2df82554c93e454a6a37534f4.gif?resize=400x0" -->
+      <!-- src="https://static.vecteezy.com/system/resources/previews/004/922/361/non_2x/map-of-scandinavia-on-black-background-vector.jpg"  -->
+      <img width="900" height="512"
+        src="https://cdn.dribbble.com/userupload/43800374/file/original-7cf58ed2df82554c93e454a6a37534f4.gif?resize=400x0"
+        alt="Product screenshot"
+        class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:-ml-0" />
+
     </div>
   </div>
+</div>
 
-  <div class="bg-zinc-900 py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2x1 lg:mx-0">
-        <h2 class="text-4x1 font-semibold tracking-tight text-pretty text-white sm:text-5x1">Tittel</h2>
-        <p class="mt-2 text-lg/8 text-gray-300">Eksempel på artikkel</p>
+<div class="bg-zinc-900 py-12 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+
+    <article class="prose prose-zinc lg:prose-lg dark:prose-invert
+                  prose-a:text-blue-600 hover:prose-a:underline
+                  prose-img:rounded-xl prose-hr:my-10
+                  prose-pre:bg-zinc-900 prose-pre:text-zinc-100
+                  prose-blockquote:border-l-blue-500">
+      <!-- your article HTML -->
+      <h2 class="mt-16 text-2xl font-bold tracking-tight text-white">Hvorfor Nordic
+        Skywatch finnes</h2>
+      <div class="text-white">
+
+        <p class="mt-2">
+          Nordic Sky Watch er opprettet fordi vi ser et tydelig informasjonsvakuum rundt uidentifiserte droner og
+          UAP-fenomenet i nordisk luftrom. Over de siste årene har det kommet en rekke rapporter om uvanlige objekter
+          over
+          flyplasser, militære installasjoner og andre kritiske områder – både i Norge, Danmark, Sverige, Tyskland og
+          flere andre land. Likevel sitter offentligheten igjen med svært lite konkret informasjon.
+        </p>
+        <p class="mt-2">
+          Vårt formål er å bidra til folkeopplysning og økt transparens. Vi ønsker å samle, strukturere og formidle det
+          som faktisk er kjent om disse hendelsene – på en nøktern, etterprøvbar og tilgjengelig måte. Nordic Sky Watch
+          er
+          ikke en kommersiell aktør; vi har ingen annonser, ingen sponsorer og ingen økonomiske interesser i temaet. All
+          data vi samler inn om observasjoner vil gradvis bli gjort åpent tilgjengelig.
+        </p>
+
+        <p class="mt-2">
+          Vi forstår at myndigheter må skjerme detaljer om sårbare installasjoner, kapasitet, sensorer og operative
+          metoder. Men vi mener samtidig at selve observasjonene av fenomenet – at noe uidentifisert har operert i norsk
+          og nordisk luftrom – som hovedregel bør kunne beskrives langt mer åpent enn i dag. Når all høyoppløselig
+          dokumentasjon (radar, optikk, FLIR, rapporter) automatisk klassifiseres og offentlig kommunikasjon reduseres
+          til vage formuleringer, skapes det et unødvendig tomrom. I dette tomrommet vokser spekulasjoner, mistillit og
+          rykter.
+        </p>
       </div>
-      <div class="mx-auto mt-10 grid max-w-2x1 grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-700 pt-10 sm:grid-cols-2 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        @each(article in articles)
-        <article class="flex max-w-xl flex-col items-start justify-between">
-          <div class="flex items-center gap-x-4 text-xs">
-            <time datetime="2020-03-16" class="text-gray-400">Mar 16, 2020</time>
-            <a href="#" class="relative z-10 rounded-full bg-gray-800/60 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-800">Nyheter</a>
-          </div>
-          <div class="group relative grow">
-            <h3 class="mt-3 text-lg/6 font-semibold text-white group-hover:text-gray-300">
-              <a href="/artikler/{{article.slug}}">
-                <span class="absolute inset-0"></span>
-                {{article.title}}
-              </a>
-            </h3>
-            <div class="prose">
+
+
+    </article>
+  </div>
+</div>
+
+{{-- <div class="bg-zinc-900 py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2x1 lg:mx-0">
+      <h2 class="text-4x1 font-semibold tracking-tight text-pretty text-white sm:text-5x1">Tittel</h2>
+      <p class="mt-2 text-lg/8 text-gray-300">Eksempel på artikkel</p>
+    </div>
+    <div
+      class="mx-auto mt-10 grid max-w-2x1 grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-700 pt-10 sm:grid-cols-2 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      @each(article in articles)
+      <article class="flex max-w-xl flex-col items-start justify-between">
+        <div class="flex items-center gap-x-4 text-xs">
+          <time datetime="2020-03-16" class="text-gray-400">Mar 16, 2020</time>
+          <a href="#"
+            class="relative z-10 rounded-full bg-gray-800/60 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-800">Nyheter</a>
+        </div>
+        <div class="group relative grow">
+          <h3 class="mt-3 text-lg/6 font-semibold text-white group-hover:text-gray-300">
+            <a href="/artikler/{{article.slug}}">
+              <span class="absolute inset-0"></span>
+              {{article.title}}
+            </a>
+          </h3>
+          <div class="prose">
             <p class="mt-5 line-clamp-3 text-sm/6 text-gray-400">{{article.excerpt}}</p>
 
-            </div>
           </div>
-          <div class="relative mt-8 flex items-center gap-x-4 justify-self-end">
-            <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-10 rounded-full bg-gray-800" />
-            <div class="text-sm/6">
-              <p class="font-semibold text-white">
-                <a href="#">
-                  <span class="absolute inset-0"></span>
-                  Michael Starmer
-                </a>
-              </p>
-              <p class="text-gray-400">Administrator</p>
-            </div>
+        </div>
+        <div class="relative mt-8 flex items-center gap-x-4 justify-self-end">
+          <img
+            src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+            alt="" class="size-10 rounded-full bg-gray-800" />
+          <div class="text-sm/6">
+            <p class="font-semibold text-white">
+              <a href="#">
+                <span class="absolute inset-0"></span>
+                Michael Starmer
+              </a>
+            </p>
+            <p class="text-gray-400">Administrator</p>
           </div>
-        </article>
-        @end
+        </div>
+      </article>
+      @end
 
 
-      </div>
-    </div>  
+    </div>
   </div>
+</div> --}}
 
-  @end
+@end
 
 @end
