@@ -1,0 +1,30 @@
+@component('components/layout/app', { title: 'Home · Nordic Sky Watch' })
+@slot('meta')
+<meta name="description" content="Latest observations across Scandinavia" />
+@end
+
+@slot('main')
+
+
+<main class="mx-auto max-w-3xl lg:max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
+  <article class="prose prose-zinc lg:prose-lg dark:prose-invert
+                  prose-a:text-blue-600 hover:prose-a:underline
+                  prose-img:rounded-xl prose-hr:my-10
+                  prose-pre:bg-zinc-900 prose-pre:text-zinc-100
+                  prose-blockquote:border-l-blue-500">
+    <!-- your article HTML -->
+    <p class="text-base/7 font-semibold text-indigo-400">Edit article</p>
+    <h2 class="mt-16 text-2xl font-bold tracking-tight text-white">{{article.title}}</h2>
+
+    <p class="mt-6 text-xl/8 text-gray-300">{{article.excerpt}}</p>
+
+
+    <p class="mt-8">{{{article.body}}}</p>
+
+
+  </article>
+</main>
+
+
+@end
+@end

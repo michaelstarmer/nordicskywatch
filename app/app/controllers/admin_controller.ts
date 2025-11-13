@@ -51,4 +51,15 @@ export default class AdminController {
         
         return view.render('pages/admin/dashboard', {articles});
     }
+
+    async edit_article({ view, request }: HttpContext)
+    {
+        console.log('Edit article')
+        const article_id = request.param('id');
+        const article = await Article.find(article_id);
+
+        console.log(`Editing article "${article?.title}" (ID: ${article?.id})`)
+
+        return view.render('pages/admin/edit_article', { article });
+    }
 }

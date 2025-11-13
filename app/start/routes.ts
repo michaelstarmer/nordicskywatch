@@ -12,6 +12,8 @@ import ObservationsController from '#controllers/observations_controller'
 import ArticlesController from '#controllers/articles_controller'
 import MainsController from '#controllers/main_controller'
 import AdminController from '#controllers/admin_controller'
+import AuthMiddleware from '#middleware/auth_middleware'
+import { middleware } from './kernel.js'
 
 // router.on('/').render('pages/home')
 router.get('/', [MainsController, 'index'])
@@ -24,6 +26,7 @@ router.post('login', [AdminController, 'login'])
 router.get('logout', [AdminController, 'logout'])
 
 router.get('dashboard', [AdminController, 'show_dashboard'])
+router.get('dashboard/articles/:id/edit', [AdminController, 'edit_article']).use(middleware.auth());
 
 router.get('artikler', [ArticlesController, 'index'])
 router.get('artikler/:slug', [ArticlesController, 'show'])
