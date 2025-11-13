@@ -1,5 +1,5 @@
 @if(!$props.title)
-  {{$props.title = 'Nordic Sky Watch'}}
+{{$props.title = 'Nordic Sky Watch'}}
 @end
 
 <!DOCTYPE html>
@@ -8,18 +8,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#18181b" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#1B181B">
   <title>
     Nordic Sky Watch
   </title>
 
-  {{-- <link rel="preconnect" href="https://fonts.bunny.net" />
+  {{--
+  <link rel="preconnect" href="https://fonts.bunny.net" />
   <link href="https://fonts.bunny.net/css?family=instrument-sans:400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet" /> --}}
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
 
   <style>
     :root {
@@ -44,7 +48,7 @@
       darkMode: 'class',
       theme: {
         extend: {
-          fontFamily: { sans: ['Nunito','sans-serif'] },
+          fontFamily: { sans: ['Nunito', 'sans-serif'] },
           colors: {
             primary: { DEFAULT: '#5A45FF', lighter: '#a599ff' },
             sand: {
@@ -61,14 +65,14 @@
   @vite(['resources/css/app.css', 'resources/js/app.js'])
   @stack('dumper')
   @if($slots.meta)
-    {{{ await $slots.meta() }}}
+  {{{ await $slots.meta() }}}
   @endif
 </head>
 
 <body class="min-h-screen w-screen font-sans">
   @include('components/partials/header')
   @if($slots.main)
-    {{{ await $slots.main() }}}
+  {{{ await $slots.main() }}}
   @endif
   @include('components/partials/footer')
 </body>
