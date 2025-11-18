@@ -7,7 +7,7 @@ export default class extends BaseSeeder {
       email: 'michael@nordicskywatch.no',
       username: 'michael',
       fullName: 'Michael Starmer',
-      password: 'test123',
+      password: 'pEi5a2Xi',
     })
   }
 }
