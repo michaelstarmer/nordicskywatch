@@ -4,22 +4,20 @@ import type { HttpContext } from '@adonisjs/core/http'
 import hash from '@adonisjs/core/services/hash';
 
 export default class AdminController {
-    async show_login({view}: HttpContext)
-    {
+    async show_login({ view }: HttpContext) {
         return view.render('pages/login');
     }
 
-    async login({ request, response, auth }: HttpContext)
-    {
+    async login({ request, response, auth }: HttpContext) {
         const username = request.input('username');
         const password = request.input('password');
 
-        
+
         const user = await User.findByOrFail('username', username);
         if (!user) {
-            return response.json({success: false, msg: "User don't exist. Something is fucked."})   
+            return response.json({ success: false, msg: "User don't exist. Something is fucked." })
         }
-    
+
 
         const isValidPassword = await hash.verify(user.password, password);
         if (!isValidPassword) {
@@ -32,28 +30,25 @@ export default class AdminController {
         } catch (error) {
             return response.badRequest('Invalid credentials.')
         }
-        
+
         return response.json({ success: true, msg: "You are logged in." });
     }
 
-    async logout({ auth, response }: HttpContext)
-    {
+    async logout({ auth, response }: HttpContext) {
         await auth.use('web').logout()
         return response.redirect('/login')
     }
 
-    async show_dashboard({ view, auth, response }: HttpContext)
-    {
+    async show_dashboard({ view, auth, response }: HttpContext) {
         await auth.use('web').authenticate()
         const articles = await Article.all();
 
         console.log(`Loaded ${articles.length} articles.`);
-        
-        return view.render('pages/admin/dashboard', {articles});
+
+        return view.render('pages/admin/dashboard', { articles });
     }
 
-    async edit_article({ view, request }: HttpContext)
-    {
+    async edit_article({ view, request }: HttpContext) {
         console.log('Edit article')
         const article_id = request.param('id');
         const article = await Article.find(article_id);
@@ -61,5 +56,14 @@ export default class AdminController {
         console.log(`Editing article "${article?.title}" (ID: ${article?.id})`)
 
         return view.render('pages/admin/edit_article', { article });
+    }
+
+    async update_article({ request, response }: HttpContext) {
+        console.log('POST: update article');
+        return response.json({
+            success: true,
+            route: request.parsedUrl.path,
+            content: request.all()
+        })
     }
 }

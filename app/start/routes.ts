@@ -27,6 +27,7 @@ router.get('logout', [AdminController, 'logout'])
 
 router.get('dashboard', [AdminController, 'show_dashboard'])
 router.get('dashboard/articles/:id/edit', [AdminController, 'edit_article']).use(middleware.auth());
+router.post('dashboard/articles/:id/edit', [AdminController, 'update_article']).use(middleware.auth());
 
 router.get('artikler', [ArticlesController, 'index'])
 router.get('artikler/:slug', [ArticlesController, 'show'])
