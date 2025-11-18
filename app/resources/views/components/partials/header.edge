@@ -1,23 +1,25 @@
-  <header class="bg-zinc-900">
-    <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
-      <div class="flex lg:flex-1">
-        <a href="/" class="-m-1.5 p-1.5">
-          <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
-        </a>
-      </div>
-      <el-popover-group class="hidden lg:flex lg:gap-x-12">
+<header class="bg-zinc-900">
+  <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+    <div class="flex lg:flex-1">
+      <a href="/" class="-m-1.5 p-1.5">
+        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt=""
+          class="h-8 w-auto" />
+      </a>
+    </div>
+    <el-popover-group class="hidden lg:flex lg:gap-x-12">
 
-        <a href="/observasjoner" class="text-sm/6 font-semibold text-white">Observasjoner</a>
-        <a href="/innsyn" class="text-sm/6 font-semibold text-white">Offentlig Innsyn</a>
-        <a href="/arkiv" class="text-sm/6 font-semibold text-white">Nyhetsarkiv</a>
-        
-      </el-popover-group>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        @if(isLoggedIn)
-        <a href="/logout" class="text-sm/6 font-semibold text-white">Logg ut <span aria-hidden="true">&rarr;</span></a>
-        @else
-        <a href="/login" class="text-sm/6 font-semibold text-white">Logg inn <span aria-hidden="true">&rarr;</span></a>
-        @endif
-      </div>
-    </nav>
-  </header>
+      <a href="/observasjoner" class="text-sm/6 font-semibold text-white">Observasjoner</a>
+      <a href="/innsyn" class="text-sm/6 font-semibold text-white">Offentlig Innsyn</a>
+      <a href="/arkiv" class="text-sm/6 font-semibold text-white">Nyhetsarkiv</a>
+
+    </el-popover-group>
+    <div class="hidden lg:flex lg:flex-1 lg:gap-x-6 lg:justify-end">
+      @if(isLoggedIn)
+      <a href="/dashboard" class="text-sm/6 font-semibold text-white">Dashboard <span aria-hidden="true"></span></a>
+      <a href="/logout" class="text-sm/6 font-semibold text-white">Logg ut <span aria-hidden="true">&rarr;</span></a>
+      @else
+      <a href="/login" class="text-sm/6 font-semibold text-white">Logg inn <span aria-hidden="true">&rarr;</span></a>
+      @endif
+    </div>
+  </nav>
+</header>

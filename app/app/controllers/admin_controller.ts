@@ -60,10 +60,19 @@ export default class AdminController {
 
     async update_article({ request, response }: HttpContext) {
         console.log('POST: update article');
-        return response.json({
-            success: true,
-            route: request.parsedUrl.path,
-            content: request.all()
-        })
+
+        const article = await Article.find(request.param('id'))
+        const { status, body } = request.all();
+
+        try {
+            await article?.merge({ status, body }).save()
+            return response.json({
+                success: true,
+                msg: `Article ${article?.id} updated successfully.`,
+            });
+        } catch (error) {
+            console.error("Updating article failed:", error);
+            return response.json({ error })
+        }
     }
 }

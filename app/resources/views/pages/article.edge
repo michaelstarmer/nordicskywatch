@@ -8,25 +8,22 @@
 
 
 
-<div class="bg-zinc-900 py-12 sm:py-32 min-h-full">
+<div class="bg-zinc-900 py-12 sm:py-12 min-h-full">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
 
-    <article class="prose prose-zinc lg:prose-lg dark:prose-invert
+    <article class="prose prose-zinc lg:prose-md dark:prose-invert
                   prose-a:text-blue-600 hover:prose-a:underline
                   prose-img:rounded-xl prose-hr:my-10
                   prose-pre:bg-zinc-900 prose-pre:text-zinc-100
                   prose-blockquote:border-l-blue-500">
       <!-- your article HTML -->
-      <h2 class="mt-16 text-2xl font-bold tracking-tight text-white">{{article.title}}</h2>
+      <h1 class="mt-16 text-2xl font-bold tracking-tight text-white">{{article.title}}</h1>
       <div class="mt-2 text-white text-base/7 font-semibold">
         {{article.excerpt}}
       </div>
-      <div class="text-white">
-
-        <p class="mt-2">
-          {{{article.body}}}
-        </p>
+      <div class="text-gray-300">
+        {{{article.body}}}
 
       </div>
 
