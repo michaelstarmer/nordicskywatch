@@ -4,7 +4,8 @@ import { BaseSeeder } from '@adonisjs/lucid/seeders'
 export default class extends BaseSeeder {
   async run() {
     await Article.createMany([{
-      title: 'Deteksjonssystem på OSL nede',
+      title: 'Hvorfor finnes Nordic Skywatch',
+      slug: 'hvorfor-finnes-nordic-skywatch',
       authorId: 1,
       language: 'NO',
       country: 'NO',
@@ -26,7 +27,7 @@ export default class extends BaseSeeder {
       authorId: 1,
       language: 'NO',
       country: 'NO',
-      status: 'published',
+      status: 'draft',
       publishedAt: null,
       sourceTitle: 'Kilde Tittel',
       sourceUrl: 'source_url',
@@ -44,7 +45,7 @@ export default class extends BaseSeeder {
       authorId: 1,
       language: 'NO',
       country: 'NO',
-      status: 'published',
+      status: 'draft',
       publishedAt: null,
       sourceTitle: 'Random Kilde Tittel',
       sourceUrl: 'source_url',
@@ -57,6 +58,6 @@ export default class extends BaseSeeder {
 <p>Enim fugiat in excepteur cillum. Duis ad voluptate excepteur labore ex enim voluptate. Ex incididunt irure dolore proident ut occaecat sunt cillum. Minim amet sint voluptate fugiat culpa ea ullamco pariatur veniam. Nisi cillum et officia eiusmod elit incididunt nostrud exercitation ullamco.</p>`,
       coverImageUrl: 'cover_img_url',
     }]
-  )
+    )
   }
 }

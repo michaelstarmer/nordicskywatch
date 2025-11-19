@@ -2,7 +2,7 @@ import { DateTime } from 'luxon'
 import { BaseModel, column } from '@adonisjs/lucid/orm'
 
 export default class Observation extends BaseModel {
-  
+
   @column({ isPrimary: true })
   declare id: number
 
@@ -19,8 +19,8 @@ export default class Observation extends BaseModel {
   declare reportedAt?: DateTime
 
   @column() declare country: string
-  @column() declare latitude: number
-  @column() declare longitude: number
+  @column() declare latitude: string
+  @column() declare longitude: string
   @column() declare verificationLevel: number
   @column() declare category?: string
   @column() declare locAccuracyM?: number
