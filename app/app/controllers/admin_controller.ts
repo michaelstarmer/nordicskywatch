@@ -54,6 +54,7 @@ export default class AdminController {
         const article = await Article.find(article_id);
 
         console.log(`Editing article "${article?.title}" (ID: ${article?.id})`)
+        console.log("Article Status:", article?.status)
 
         return view.render('pages/admin/edit_article', { article });
     }

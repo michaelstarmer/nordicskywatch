@@ -9,6 +9,7 @@ export default class extends BaseSchema {
       table.string('full_name').nullable()
       table.string('username', 50).notNullable().unique()
       table.string('email', 254).notNullable().unique()
+      table.enum('role', ['ADMIN', 'USER', 'GUEST']).notNullable().defaultTo('USER')
       table.string('password').notNullable()
 
       table.timestamp('created_at').notNullable()
